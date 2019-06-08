@@ -13,6 +13,10 @@
         "cross-env": "^5.1",
         "laravel-mix": "^4.0.7",
         "laravel-mix-purgecss": "^4.1.0",
+        "purgecss-webpack-plugin": "^1.5.0",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "glob": "^7.1.4"
     }
 }

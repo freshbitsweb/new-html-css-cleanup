@@ -1,4 +1,6 @@
 const mix = require('laravel-mix');
+let purgeCss = require('purgecss-webpack-plugin');
+let glob = require('glob-all');
 
 /*
  |--------------------------------------------------------------------------
@@ -23,10 +25,37 @@ mix.scripts([
         'resources/js/appear.min.js',
         'resources/js/lity.js',
     ], 'public/js/all.js')
-    .styles('resources/css/animate.css', 'public/css/animate.css')
-    .styles('resources/css/bootstrap.min.css', 'public/css/bootstrap.min.css')
-    .styles('resources/css/font-awesome.min.css', 'public/css/font-awesome.min.css')
-    .styles('resources/css/lity.css', 'public/css/lity.css')
-    .styles('resources/css/style.css', 'public/css/style.css')
-    .styles('resources/css/slick.css', 'public/css/slick.css')
+    .postCss('resources/css/animate.css', 'public/css/animate.css')
+    .postCss('resources/css/bootstrap.min.css', 'public/css/bootstrap.min.css')
+    .postCss('resources/css/font-awesome.min.css', 'public/css/font-awesome.min.css')
+    .postCss('resources/css/lity.css', 'public/css/lity.css')
+    .postCss('resources/css/style.css', 'public/css/style.css')
+    .postCss('resources/css/slick.css', 'public/css/slick.css')
+    .options({
+        processCssUrls: false
+    })
 ;
+
+function collectWhitelist() {
+    return ['lity-iframe', 'lity-container', 'lity-youtube', 'lity-container', 'lity-vimeo', 'lity-container', 'lity-facebookvideo', 'lity-container', 'lity-googlemaps', 'lity-container'];
+}
+
+mix.webpackConfig({
+    plugins: [
+        new purgeCss({
+            paths: glob.sync([
+                path.join(__dirname, 'resources/views/**/*.blade.php'),
+                path.join(__dirname, 'resources/js/**/*.js')
+            ]),
+            whitelist: collectWhitelist,
+            extractors: [{
+                extractor: class {
+                    static extract(content) {
+                        return content.match(/[A-z0-9-:\/]+/g)
+                    }
+                },
+                extensions: ['html', 'js', 'php', 'vue']
+            }]
+        })
+    ]
+})
