@@ -5,40 +5,16 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>Freshbits Web Solutions | Web apps | Backend systems | Laravel | Vue.js</title>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-
-    <link rel="manifest" href="images/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css">
+    <link rel="stylesheet" href="{{ mix('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/style.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/slick.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/lity.css') }}">
 
-    <link href="css/lity.css" rel="stylesheet"/>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{ mix('js/all.js') }}"></script>
 </head>
 
 <body id="home">
@@ -2345,20 +2321,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
-    </script>
-
-    <!-- Menu link click slide -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <script src="js/appear.min.js"></script>
-
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/267285/jquery.lettering.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/267285/jquery.textillate.js"></script>
-
     <script>
         /*navbar white*/
         $(window).scroll(function () {
@@ -2403,7 +2365,6 @@
         });
     </script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
     <script>
         /*animated svg js*/
         function spinGlobe() {
@@ -2435,8 +2396,6 @@
 
         spinGlobe();
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.js"></script>
 
     <script>
         /*marquee js*/
@@ -2581,7 +2540,6 @@
         });
     </script>
 
-    <script src="js/lity.js"></script>
     <script async defer src="//buttons.github.io/buttons.js"></script>
 </body>
 </html>
