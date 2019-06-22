@@ -2539,6 +2539,12 @@
                 }
             });
 
+            $('.btn-submit').popover({
+                content: "Thank you. Form submitted successfully. We will get in touch soon.",
+                placement: "right",
+                trigger: "manual"
+            });
+
             $("#contact-form").submit(function(e) {
                 e.preventDefault();
 
@@ -2549,11 +2555,7 @@
                 ).done(function() {
                     $("#contact-form")[0].reset();
 
-                    $('.btn-submit').popover({
-                        content: "Thank you. Form submitted successfully. We will get in touch soon.",
-                        placement: "right",
-                        trigger: "focus click"
-                    });
+                    $('.btn-submit').popover('show');
                 }).fail(function() {
                     alert("Not done!");
                 });
