@@ -2621,7 +2621,7 @@ div#preload { display: none; }
 	padding: 0px 0px 40px;
 }
 
-#edit-form p {
+#contact-form p {
 	color: #424753;
 	font-size: 18px;
 	max-width: 400px;
@@ -2837,8 +2837,8 @@ form textarea {
 	resize: none;
 }
 
-#edit-form input::placeholder,
-#edit-form textarea::placeholder {
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
 	font-size: 15px;
 	color: #d1d1d1;
 }
@@ -3120,7 +3120,7 @@ form label {
    padding: 0px 0px 20px;
    margin:0;
 }
-#edit-form p {
+#contact-form p {
    font-size: 16px;
    padding-bottom: 20px;
    line-height: 25px;
@@ -3530,7 +3530,7 @@ form textarea {
 		font-size: 28px;
 		padding: 0px 0px 10px;
 	}
-	#edit-form p {
+	#contact-form p {
 		max-width: 100%;
 		padding-bottom: 20px;
 	}

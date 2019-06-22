@@ -2273,8 +2273,18 @@
                                 <div class="conatiner">
                                     <div class="item-decribe">
                                         <div class="edit-info-inner">
-                                            <form id="edit-form">
+                                            <form id="contact-form"
+                                                name="contact"
+                                                method="POST"
+                                                data-netlify="true"
+                                                netlify-honeypot="bot-field"
+                                            >
+                                                <p class="hidden">
+                                                    <label><input name="bot-field"></label>
+                                                </p>
+
                                                 <h5 class="contact-head">Contact Us</h5>
+
                                                 <p>
                                                     Striving to talk with you soon. Let's build something awesome. Great wishes!
                                                 </p>
@@ -2282,32 +2292,32 @@
                                                 <ul class="row edit-list">
                                                     <li class="col-sm-6">
                                                         <label>First name</label>
-                                                        <input type="text" value="" placeholder="Benedict">
+                                                        <input type="text" name="first_name" placeholder="Benedict" required>
                                                     </li>
 
                                                     <li class="col-sm-6">
                                                         <label>Last name</label>
-                                                        <input type="text" value="" placeholder="Cumberbatch">
+                                                        <input type="text" name="last_name" placeholder="Cumberbatch">
                                                     </li>
 
                                                     <li class="col-sm-6">
                                                         <label>Email Address</label>
-                                                        <input type="email" value="" placeholder="Benedict154@mail.com">
+                                                        <input type="email" name="email" placeholder="Benedict154@mail.com" required>
                                                     </li>
 
                                                     <li class="col-sm-6">
                                                         <label>Phone</label>
-                                                        <input type="text" value="" placeholder="+562 288 5264">
+                                                        <input type="text" name="phone" placeholder="+562 288 5264" required>
                                                     </li>
 
                                                     <li class="col-sm-12">
                                                         <label>Message</label>
-                                                        <textarea placeholder="Type here.."></textarea>
+                                                        <textarea name="message" placeholder="Type here.."></textarea>
                                                     </li>
                                                 </ul>
 
                                                 <div class="btn-sub">
-                                                    <a href="#" class="btn-submit">Submit</a>
+                                                    <button type="submit" class="btn-submit">Submit</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -2500,15 +2510,6 @@
                 }
             });
         });
-
-        /*popover js*/
-        (function () {
-            $('.btn-submit').popover({
-                content: "Message submitted successfully",
-                placement: "right",
-                trigger: "focus click"
-            });
-        })();
     </script>
 
     <script>
@@ -2536,6 +2537,26 @@
                     }, 1500, 'easeInOutExpo');
                     event.preventDefault();
                 }
+            });
+
+            $("#contact-form").submit(function(e) {
+                e.preventDefault();
+
+                var contactForm = $(this);
+                $.post(
+                    contactForm.attr("action"),
+                    contactForm.serialize()
+                ).done(function() {
+                    $("#contact-form")[0].reset();
+
+                    $('.btn-submit').popover({
+                        content: "Thank you. Form submitted successfully. We will get in touch soon.",
+                        placement: "right",
+                        trigger: "focus click"
+                    });
+                }).fail(function() {
+                    alert("Not done!");
+                });
             });
         });
     </script>
