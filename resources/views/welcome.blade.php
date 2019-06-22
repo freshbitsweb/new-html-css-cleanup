@@ -802,7 +802,7 @@
                         <div class="serv-img">
                             <?xml version="1.0" encoding="UTF-8"?>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 200.73 182.9">
+                                viewBox="0 0 120.73 182.9">
                                 <defs>
                                     <style>
                                         .serv1-1 {
