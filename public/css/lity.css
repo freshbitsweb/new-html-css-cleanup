@@ -141,6 +141,14 @@
 }
 /* Image */
 /* iFrame */
+.lity-iframe .lity-container,
+.lity-youtube .lity-container,
+.lity-vimeo .lity-container,
+.lity-facebookvideo .lity-container,
+.lity-googlemaps .lity-container {
+  width: 100%;
+  max-width: 964px;
+}
 .lity-iframe-container {
   width: 100%;
   height: 0;
