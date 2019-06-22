@@ -2556,6 +2556,10 @@
                     $("#contact-form")[0].reset();
 
                     $('.btn-submit').popover('show');
+
+                    setTimeout(function(){
+                        $('.btn-submit').popover('hide');
+                    }, 4000);
                 }).fail(function() {
                     alert("Not done!");
                 });
