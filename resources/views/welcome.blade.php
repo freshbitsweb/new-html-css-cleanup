@@ -2039,17 +2039,17 @@
                     <ul class="team-list">
                         <li>
                             <a href="//laravelfactory.com/blog/php-composer-tutorial" target="_blank">
-                                <img src="images/team-1.png">
+                                <img src="images/why-and-how-of-php-composer.png" alt="Why and how of PHP Composer" width="100%">
                                 <h5>What, why and how of PHP Composer</h5>
-                                <span>Let's demystify the package manager..</span>
+                                <span>Let's demystify the package manager...</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="//laravelfactory.com/blog/step-by-step-guide-to-laravel-package-development" target="_blank">
-                                <img src="images/team-2.png">
+                                <img src="images/step-by-step-guide-to-package-development.jpeg" alt="Guide to Laravel package development" width="100%">
                                 <h5>Guide to Laravel package development</h5>
-                                <span>Step by step guide to package development..</span>
+                                <span>Step by step guide to package development...</span>
                             </a>
                         </li>
                     </ul>

@@ -675,7 +675,7 @@ div#preload { display: none; }
 	margin: 0;
 	line-height: 35px;
     text-align:center;
-    height: 100px;
+    height: auto;
 }
 
 .portfolio-inner {
@@ -3513,10 +3513,6 @@ form textarea {
 	.team-member {
 		margin: 10px 0;
 		padding: 0;
-		    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 	}
 }
 @media (max-width:767px) {
